@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Rolling Dice | Premium Casino Games Portal & Integration Agent</title>
+    <meta name="description" content="Rolling Dice acts as a premier gaming agent representing top casino game developers from China and the US. Launch your high-performance casino web portal today.">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Demo Version Ribbon -->
+    <div class="demo-ribbon" aria-label="Demo version notice">
+        Demo Version<br>Not Operational
+    </div>
+
+    <!-- Full-Page Watermark -->
+    <div class="watermark" aria-hidden="true"></div>
+    <!-- SVG Gradients Definition -->
+    <svg style="display: none;">
+        <defs>
+            <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#bf953f" />
+                <stop offset="30%" stop-color="#fcf6ba" />
+                <stop offset="70%" stop-color="#b38728" />
+                <stop offset="85%" stop-color="#fbf5b7" />
+                <stop offset="100%" stop-color="#aa771c" />
+            </linearGradient>
+        </defs>
+    </svg>
+
+    <!-- Header / Navigation -->
+    <header id="header">
+        <div class="container">
+            <a href="#home" class="logo">
+                <svg class="logo-crown" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7z" />
+                    <path d="M3 20h18" />
+                </svg>
+                <span>ROLLING DICE</span>
+            </a>
+            
+            <nav id="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#demos" class="nav-link">Demos</a>
+                <a href="#promotions" class="nav-link">Promotions</a>
+                <a href="#how-it-works" class="nav-link">How It Works</a>
+                <a href="#payments" class="nav-link">Payment</a>
+                <a href="#contacts" class="nav-link">Contacts</a>
+            </nav>
+
+            <button class="nav-cta" onclick="openContactModal()">Connect Agent</button>
+            <button class="menu-btn" id="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <span class="hero-subtitle">Premium Casino Games Agent</span>
+                <h1 class="hero-title">Elevate Your Platform with <span class="gold-text">Rolling Dice</span></h1>
+                <p class="hero-desc">We bridge the gap between premium casino game developers from China and the United States and global operators. Experience the next-generation web portal built to maximize player engagement and retention.</p>
+                <div class="hero-btns">
+                    <button class="btn-primary" onclick="scrollToSection('demos')">View Live Demos</button>
+                    <button class="btn-secondary" onclick="scrollToSection('how-it-works')">How It Works</button>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="glow-ring"></div>
+                <div class="device-mockup">
+                    <div class="device-screen">
+                        <div class="mockup-header">
+                            <span class="mockup-logo">ROLLING DICE</span>
+                            <span class="mockup-balance">$1,452,000</span>
+                        </div>
+                        
+                        <div class="mockup-banner">
+                            <h4>HOTTEST GAMES</h4>
+                            <p>Integrated from Elite China & US Devs</p>
+                        </div>
+
+                        <div class="mockup-games">
+                            <div class="mockup-game-card">
+                                <span class="mockup-game-title">Golden Dragon</span>
+                                <span class="mockup-game-type">Slots</span>
+                            </div>
+                            <div class="mockup-game-card">
+                                <span class="mockup-game-title">Vegas Poker</span>
+                                <span class="mockup-game-type">Table</span>
+                            </div>
+                            <div class="mockup-game-card">
+                                <span class="mockup-game-title">Fortune Wheel</span>
+                                <span class="mockup-game-type">Crash</span>
+                            </div>
+                            <div class="mockup-game-card">
+                                <span class="mockup-game-title">Imperial Lotto</span>
+                                <span class="mockup-game-type">Lottery</span>
+                            </div>
+                        </div>
+
+                        <div class="mockup-footer">
+                            <span class="active">Lobby</span>
+                            <span>Wallet</span>
+                            <span>Support</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demos">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Web Portal Demos</span>
+                <h2 class="section-title">Test Our Integrated Games</h2>
+                <p class="section-desc">Experience the precise gameplay, visual polish, and performance stability we design for operators looking to run their casino portals.</p>
+            </div>
+
+            <div class="filter-tabs">
+                <button class="filter-btn active" onclick="filterGames('all')">All Developers</button>
+                <button class="filter-btn" onclick="filterGames('china')">China Developers</button>
+                <button class="filter-btn" onclick="filterGames('us')">US Developers</button>
+            </div>
+
+            <div class="game-grid" id="games-container">
+                <!-- Game 1 -->
+                <div class="game-card" data-region="china">
+                    <div class="game-thumbnail thumbnail-slots">
+                        <span class="game-region game-region-cn">🇨🇳 China Dev</span>
+                        <div class="game-art-element">🐉</div>
+                        <div class="thumbnail-overlay">
+                            <button class="btn-launch" onclick="launchDemo('dragon-slots')">Launch Demo</button>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <div class="game-title-row">
+                            <h3 class="game-title">Majestic Dragon Slots</h3>
+                            <span class="game-tag">Slots</span>
+                        </div>
+                        <p class="game-desc">A rich Chinese-mythology themed slot game featuring expanding wild reels, jackpot wheels, and golden coin shimmers.</p>
+                        <div class="game-meta">
+                            <span>RTP: <strong>96.8%</strong></span>
+                            <span>Volatility: <strong>High</strong></span>
+                        </div>
+                    </div>
+                    <button class="game-card-mobile-btn" onclick="launchDemo('dragon-slots')">▶ Launch Demo</button>
+                </div>
+
+                <!-- Game 2 -->
+                <div class="game-card" data-region="us">
+                    <div class="game-thumbnail thumbnail-table">
+                        <span class="game-region game-region-us">🇺🇸 US Dev</span>
+                        <div class="game-art-element">🃏</div>
+                        <div class="thumbnail-overlay">
+                            <button class="btn-launch" onclick="launchDemo('blackjack')">Launch Demo</button>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <div class="game-title-row">
+                            <h3 class="game-title">Vegas High-Roller</h3>
+                            <span class="game-tag">Table</span>
+                        </div>
+                        <p class="game-desc">Premium Vegas blackjack interface optimized for high-volume players, offering multi-hand bets and side options.</p>
+                        <div class="game-meta">
+                            <span>RTP: <strong>99.5%</strong></span>
+                            <span>Volatility: <strong>Medium</strong></span>
+                        </div>
+                    </div>
+                    <button class="game-card-mobile-btn" onclick="launchDemo('blackjack')">▶ Launch Demo</button>
+                </div>
+
+                <!-- Game 3 -->
+                <div class="game-card" data-region="china">
+                    <div class="game-thumbnail thumbnail-crash">
+                        <span class="game-region game-region-cn">🇨🇳 China Dev</span>
+                        <div class="game-art-element">🚀</div>
+                        <div class="thumbnail-overlay">
+                            <button class="btn-launch" onclick="launchDemo('crash')">Launch Demo</button>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <div class="game-title-row">
+                            <h3 class="game-title">Golden Rising</h3>
+                            <span class="game-tag">Crash</span>
+                        </div>
+                        <p class="game-desc">A fast-paced multiplayer crash game matching eastern aesthetics with high-multiplier thrill mechanics.</p>
+                        <div class="game-meta">
+                            <span>RTP: <strong>97.2%</strong></span>
+                            <span>Volatility: <strong>Dynamic</strong></span>
+                        </div>
+                    </div>
+                    <button class="game-card-mobile-btn" onclick="launchDemo('crash')">▶ Launch Demo</button>
+                </div>
+
+                <!-- Game 4 -->
+                <div class="game-card" data-region="us">
+                    <div class="game-thumbnail thumbnail-lottery">
+                        <span class="game-region game-region-us">🇺🇸 US Dev</span>
+                        <div class="game-art-element">🎰</div>
+                        <div class="thumbnail-overlay">
+                            <button class="btn-launch" onclick="launchDemo('wheel')">Launch Demo</button>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <div class="game-title-row">
+                            <h3 class="game-title">Rolling Dice Wheel</h3>
+                            <span class="game-tag">Wheel</span>
+                        </div>
+                        <p class="game-desc">The signature Rolling Dice lucky wheel game offering multipliers, instant bonuses, and glowing luxury lighting.</p>
+                        <div class="game-meta">
+                            <span>RTP: <strong>96.5%</strong></span>
+                            <span>Volatility: <strong>Low</strong></span>
+                        </div>
+                    </div>
+                    <button class="game-card-mobile-btn" onclick="launchDemo('wheel')">▶ Launch Demo</button>
+                </div>
+
+                <!-- Game 5 (NEW) -->
+                <div class="game-card" data-region="china">
+                    <div class="game-thumbnail thumbnail-table">
+                        <span class="game-region game-region-cn">🇨🇳 China Dev</span>
+                        <div class="game-art-element">🐯</div>
+                        <div class="thumbnail-overlay">
+                            <button class="btn-launch" onclick="launchDemo('blackjack')">Launch Demo</button>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <div class="game-title-row">
+                            <h3 class="game-title">Fortune Tiger Baccarat</h3>
+                            <span class="game-tag">Baccarat</span>
+                        </div>
+                        <p class="game-desc">A silky-smooth live baccarat experience with tiger-themed power cards, dragon bonuses, and live dealer interaction.</p>
+                        <div class="game-meta">
+                            <span>RTP: <strong>98.7%</strong></span>
+                            <span>Volatility: <strong>Low</strong></span>
+                        </div>
+                    </div>
+                    <button class="game-card-mobile-btn" onclick="launchDemo('blackjack')">▶ Launch Demo</button>
+                </div>
+
+                <!-- Game 6 (NEW) -->
+                <div class="game-card" data-region="us">
+                    <div class="game-thumbnail thumbnail-lottery">
+                        <span class="game-region game-region-us">🇺🇸 US Dev</span>
+                        <div class="game-art-element">♠️</div>
+                        <div class="thumbnail-overlay">
+                            <button class="btn-launch" onclick="launchDemo('blackjack')">Launch Demo</button>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <div class="game-title-row">
+                            <h3 class="game-title">Jackpot Rush Poker</h3>
+                            <span class="game-tag">Poker</span>
+                        </div>
+                        <p class="game-desc">Texas Hold'em powered by elite US studio AI algorithms — progressive jackpot pots, multi-table rooms, and bluff meters.</p>
+                        <div class="game-meta">
+                            <span>RTP: <strong>97.8%</strong></span>
+                            <span>Volatility: <strong>High</strong></span>
+                        </div>
+                    </div>
+                    <button class="game-card-mobile-btn" onclick="launchDemo('blackjack')">▶ Launch Demo</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promotions Section -->
+    <section id="promotions">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Promotions & Incentives</span>
+                <h2 class="section-title">Partner Benefits</h2>
+                <p class="section-desc">Our commission-sharing and integration programs are designed to incentivize gaming operators and support launching casino applications.</p>
+            </div>
+
+            <div class="promo-grid">
+                <!-- Promo 1 -->
+                <div class="promo-card">
+                    <span class="promo-badge">Zero Setup Fee</span>
+                    <h3 class="promo-title">First-Tier Operator Deal</h3>
+                    <p class="promo-desc">Integrate our game inventory package during this promotional window and enjoy full API setup with zero initial costs.</p>
+                    <ul class="promo-features">
+                        <li>
+                            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Free first-month portal hosting & licensing support
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Direct support desk for setup configurations
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            99.9% API uptime guaranteed
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Promo 2 -->
+                <div class="promo-card">
+                    <span class="promo-badge">High Revenue</span>
+                    <h3 class="promo-title">Agent Referral Commission</h3>
+                    <p class="promo-desc">Receive generous monthly returns by referring developers or licensing software bundles to casino operators.</p>
+                    <ul class="promo-features">
+                        <li>
+                            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Tiered commission up to 25% revenue share
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Instant monthly payouts via USD or crypto wallets
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Dedicated account dashboard to track leads
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Integration Timeline</span>
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-desc">Get your custom-branded casino portal up and running in four simple, guided steps with Rolling Dice.</p>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-body">
+                        <h3 class="step-title">Consultation</h3>
+                        <p class="step-desc">Speak to one of our regional agents via WhatsApp or Telegram to define your game specifications and target market.</p>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-body">
+                        <h3 class="step-title">Select Games</h3>
+                        <p class="step-desc">Choose from our curated collection of verified slot, table, and crash games sourced from premium US and China developers.</p>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-body">
+                        <h3 class="step-title">API Integration</h3>
+                        <p class="step-desc">Our developers configure the API backend, integrate wallet options, and set up your administrative panel in under 48 hours.</p>
+                    </div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <div class="step-body">
+                        <h3 class="step-title">Launch Casino</h3>
+                        <p class="step-desc">Go live with a premium, fully optimized online gaming portal, backed by 24/7 technical assistance and operations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payments Section -->
+    <section id="payments">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Flexible Settlement</span>
+                <h2 class="section-title">Supported Payments</h2>
+                <p class="section-desc">We support diverse international and localized payment networks for seamless deposits and swift payouts.</p>
+            </div>
+
+            <div class="payment-grid">
+                <!-- USDT/BTC Crypto -->
+                <div class="payment-card">
+                    <div class="payment-logo">
+                        <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-2H9v-2h2v-1H9V9h2V7h2v2h1.5c.83 0 1.5.67 1.5 1.5v1c0 .83-.67 1.5-1.5 1.5H13v1h2v2h-2v2z" />
+                        </svg>
+                    </div>
+                    <h3 class="payment-title">USDT / Bitcoin</h3>
+                    <span class="payment-speed">Instant</span>
+                </div>
+
+                <!-- CashApp (NEW) -->
+                <div class="payment-card">
+                    <div class="payment-logo">
+                        <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1.41 16.09V20h-2.67v-1.93c-1.71-.36-3.16-1.46-3.27-3.4h1.96c.1 1.05.82 1.87 2.65 1.87 1.96 0 2.4-.98 2.4-1.59 0-.83-.44-1.61-2.67-2.14-2.48-.6-4.18-1.62-4.18-3.67 0-1.72 1.39-2.84 3.11-3.21V4h2.67v1.95c1.86.45 2.79 1.86 2.85 3.39H14.3c-.05-1.11-.64-1.87-2.22-1.87-1.5 0-2.4.68-2.4 1.64 0 .84.65 1.39 2.67 1.91s4.18 1.39 4.18 3.91c-.01 1.83-1.38 2.83-3.12 3.16z"/>
+                        </svg>
+                    </div>
+                    <h3 class="payment-title">Cash App</h3>
+                    <span class="payment-speed">Instant</span>
+                </div>
+
+                <!-- Chime (NEW) -->
+                <div class="payment-card">
+                    <div class="payment-logo">
+                        <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor">
+                            <path d="M20 4H4c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="payment-title">Chime</h3>
+                    <span class="payment-speed">Same Day</span>
+                </div>
+
+                <!-- Zelle (NEW) -->
+                <div class="payment-card">
+                    <div class="payment-logo">
+                        <svg viewBox="0 0 24 24" width="36" height="36" fill="currentColor">
+                            <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/>
+                        </svg>
+                    </div>
+                    <h3 class="payment-title">Zelle</h3>
+                    <span class="payment-speed">Minutes</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacts Section -->
+    <section id="contacts">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">24/7 Agent Support</span>
+                <h2 class="section-title">Get in Touch</h2>
+                <p class="section-desc">Connect directly with our account executives to configure your license and developer key integrations.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info-block">
+                    <div>
+                        <h3 style="margin-bottom: 12px; font-size: 1.5rem;">Talk to an Agent</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.95rem;">Select your preferred communication network. Our sales agents respond inside 5 minutes during business hours.</p>
+                    </div>
+
+                    <div class="contact-channels">
+                        <!-- Whatsapp -->
+                        <a href="https://wa.me/1234567890?text=Hello%2C%20I%20am%20interested%20in%20Grand%20Million%20casino%20integration%20services." target="_blank" class="channel-card" id="btn-whatsapp">
+                            <div class="channel-icon channel-wa">💬</div>
+                            <div class="channel-details">
+                                <h4>WhatsApp Support</h4>
+                                <p>Instant chat with senior sales desk</p>
+                            </div>
+                        </a>
+
+                        <!-- Telegram -->
+                        <a href="https://t.me/grand_million_support" target="_blank" class="channel-card" id="btn-telegram">
+                            <div class="channel-icon channel-tg">✈️</div>
+                            <div class="channel-details">
+                                <h4>Telegram Messenger</h4>
+                                <p>Secure updates and API keys dispatch</p>
+                            </div>
+                        </a>
+
+                        <!-- FB Messenger -->
+                        <a href="https://m.me/grandmillion.official" target="_blank" class="channel-card" id="btn-messenger">
+                            <div class="channel-icon channel-fb">⚡</div>
+                            <div class="channel-details">
+                                <h4>Facebook Messenger</h4>
+                                <p>General marketing & agent inquiries</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <form id="contact-form" onsubmit="handleFormSubmit(event)">
+                        <div class="form-group">
+                            <label class="form-label" for="form-name">Company Name</label>
+                            <input class="form-control" type="text" id="form-name" placeholder="Enter your casino or brand name" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="form-email">Email Address</label>
+                            <input class="form-control" type="email" id="form-email" placeholder="Enter your business email" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="form-platform">Target Market</label>
+                            <select class="form-control" id="form-platform">
+                                <option value="global">Global Markets</option>
+                                <option value="china">Asia & China Markets</option>
+                                <option value="us">United States Markets</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="form-msg">Integration Message</label>
+                            <textarea class="form-control" id="form-msg" rows="4" placeholder="Tell us about your project or licensing timeline..."></textarea>
+                        </div>
+                        <button class="btn-primary" type="submit" style="width: 100%;">Send Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <a href="#home" class="logo">
+                <svg class="logo-crown" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7z" />
+                    <path d="M3 20h18" />
+                </svg>
+                <span>ROLLING DICE</span>
+            </a>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#demos">Demos</a>
+                <a href="#promotions">Promotions</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#payments">Payment Methods</a>
+                <a href="#contacts">Contact Us</a>
+            </div>
+            <div class="footer-copyright">
+                &copy; 2026 Rolling Dice. All Rights Reserved. Gaming integration license US-CN/4089.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Demo Modal / Simulator -->
+    <div class="modal" id="demo-modal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modal-game-title">Casino Game Demo <span>Live Play</span></h3>
+                <button class="modal-close" onclick="closeDemo()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="simulator-pane">
+                    <div class="simulator-gamepad" id="simulator-content">
+                        <!-- Playable mock games loaded dynamically by app.js -->
+                    </div>
+                </div>
+                <div class="simulator-sidebar">
+                    <div>
+                        <h4 class="sidebar-title" id="sidebar-game-title">Game Title</h4>
+                        <p class="sidebar-desc" id="sidebar-game-desc">Game short description...</p>
+                        
+                        <div class="metric-row">
+                            <span class="metric-label">RTP</span>
+                            <span class="metric-value" id="metric-rtp">--</span>
+                        </div>
+                        <div class="metric-row">
+                            <span class="metric-label">Volatility</span>
+                            <span class="metric-value" id="metric-volatility">--</span>
+                        </div>
+                        <div class="metric-row">
+                            <span class="metric-label">Demo Balance</span>
+                            <span class="metric-value" id="simulator-balance">$10,000.00</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mockup-controls">
+                        <button class="btn-primary" id="btn-spin" onclick="playSimulatorStep()">Spin / Spin Wheel</button>
+                        <button class="btn-secondary" onclick="resetSimulatorBalance()">Reset Balance</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Messenger Buttons (Bottom-Right) -->
+    <div class="floating-messengers" id="floating-messengers">
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/1234567890?text=Hello%2C%20I%20am%20interested%20in%20Grand%20Million%20casino%20integration%20services."
+           target="_blank"
+           rel="noopener noreferrer"
+           class="float-btn float-wa"
+           id="float-btn-whatsapp"
+           data-label="WhatsApp Agent"
+           aria-label="Contact via WhatsApp">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+        </a>
+
+        <!-- Telegram -->
+        <a href="https://t.me/grand_million_support"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="float-btn float-tg"
+           id="float-btn-telegram"
+           data-label="Telegram Support"
+           aria-label="Contact via Telegram">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+            </svg>
+        </a>
+
+        <!-- Facebook Messenger -->
+        <a href="https://m.me/grandmillion.official"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="float-btn float-fb"
+           id="float-btn-messenger"
+           data-label="FB Messenger"
+           aria-label="Contact via Facebook Messenger">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 0C5.373 0 0 4.974 0 11.111c0 3.498 1.744 6.614 4.469 8.654V24l4.088-2.242c1.092.3 2.246.464 3.443.464 6.627 0 12-4.975 12-11.111C24 4.974 18.627 0 12 0zm1.191 14.963l-3.055-3.26-5.963 3.26L10.732 8l3.131 3.259L19.752 8l-6.561 6.963z"/>
+            </svg>
+        </a>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
